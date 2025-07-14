@@ -9,13 +9,17 @@ on:
 jobs:
   My-Deploy-Job:
     runs-on: ubuntu-latest
-#하나의 Job은 여러개의 Step으로 이루어져있다.
+    #하나의 Job은 여러개의 Step으로 이루어져있다.
     steps:
       - name: Hello World 출력하기
         run: echo "hello World"
 
       - name: 여러 명령어 문장 작성하기
         run: |
-         echo "Good"
-         echo "Morning"
-         pwd
+          echo "Good"
+          echo "Morning"
+          pwd
+
+      - name: Github Actions 자체 저장되어 있는 변수 사용해보기
+        run: |
+          echo $
